@@ -11,9 +11,9 @@ function init() {
 }
 function attemptLogin(ev) {
   //redirect to the API endpoint /api/auth/login
-  const API = new URL('http://localhost:4000/api/auth/login');
+  const API = new URL('https://legendary-server.vercel.app/api/auth/login');
   //send our redirectURL to that endpoint
-  const returnpoint = 'http://localhost:9022/private.html';
+  const returnpoint = 'https://legendary-client.vercel.app/private.html';
   API.search = `?redirect_url=${encodeURIComponent(returnpoint)}`;
   location.assign(API.href);
 }
